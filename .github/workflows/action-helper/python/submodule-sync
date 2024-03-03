@@ -22,7 +22,7 @@ from utils import EnvDefault, PullRequest, strtobool
 
 def main():
     parser = ArgumentParser(description="Submodule Sync")
-    parser.add_argument("--owner", action=EnvDefault, env="OWNER",
+    parser.add_argument("--owner", action=EnvDefault, env="NVTIMLIU",
                         help="github token, will try use env OWNER if empty")
     parser.add_argument("--repo", action=EnvDefault, env="REPO",
                         help="repo name, will try use env REPO if empty")
@@ -70,9 +70,10 @@ def main():
 
         if args.passed:
             if args.sha == sha:
-                pr.auto_merge(number, sha, merge_method='squash')
-                if args.delete_head:
-                    pr.delete_head()
+                print('sha:%s' % sha)
+                # pr.auto_merge(number, sha, merge_method='squash')
+                # if args.delete_head:
+                #    pr.delete_head()
             else:
                 raise Exception(f'Failed to auto-merge, inconsistent HEAD sha local:{args.sha}, remote: {sha}')
     except Exception as e:
