@@ -42,6 +42,7 @@ def main():
                         help="if delete HEAD branch after auto-merge")
     args = parser.parse_args()
 
+    print('args.owner:%s'%args.owner)
     pr = PullRequest(head_owner=args.owner, head=args.head, head_token=args.token,
                      base_owner=args.owner, repo=args.repo, base=args.base, base_token=args.token)
     try:
@@ -70,9 +71,10 @@ def main():
 
         if args.passed:
             if args.sha == sha:
-                pr.auto_merge(number, sha, merge_method='squash')
-                if args.delete_head:
-                    pr.delete_head()
+                print('before merge')
+                # pr.auto_merge(number, sha, merge_method='squash')
+                # if args.delete_head:
+                #     pr.delete_head()
             else:
                 raise Exception(f'Failed to auto-merge, inconsistent HEAD sha local:{args.sha}, remote: {sha}')
     except Exception as e:
