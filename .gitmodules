@@ -1,4 +1,4 @@
 [submodule "thirdparty/cudf"]
 	path = thirdparty/cudf
-	url = https://github.com/rapidsai/cudf.git
-	branch = branch-24.04
+	url = https://github.com/nvtimliu/cudf.git
+	branch = 2404-cudf15159
