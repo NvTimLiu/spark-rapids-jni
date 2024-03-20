@@ -73,10 +73,10 @@ cp -f "$FIRST_FILE" "$FPATH.jar"
 if [ "$SIGN_FILE" == true ]; then
     case $SIGN_TOOL in
         nvsec)
-            DEPLOY_CMD="$MVN gpg:sign-and-deploy-file -Dgpg.executable=nvsec_sign"
+            DEPLOY_CMD="$MVN org.apache.maven.plugins:maven-gpg-plugin:3.0.1:sign-and-deploy-file -Dgpg.executable=nvsec_sign"
             ;;
         gpg)
-            DEPLOY_CMD="$MVN gpg:sign-and-deploy-file -Dgpg.passphrase=$GPG_PASSPHRASE "
+            DEPLOY_CMD="$MVN org.apache.maven.plugins:maven-gpg-plugin:3.0.1:sign-and-deploy-file -Dgpg.passphrase=$GPG_PASSPHRASE "
             ;;
         *)
             echo "Error unsupported sign type : $SIGN_TYPE !"
