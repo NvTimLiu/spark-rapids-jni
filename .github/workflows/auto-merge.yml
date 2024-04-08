@@ -55,7 +55,7 @@ jobs:
         with:
           operator: auto-merge
         env:
-          OWNER: NVIDIA
+          OWNER: NvTimLiu
           REPO: spark-rapids-jni
           HEAD: bot-auto-merge-${{ env.HEAD }}
           BASE: ${{ env.BASE }}
