@@ -20,7 +20,7 @@
         {
           "file" : "cccl/bug_fixes.diff",
           "fixed_in" : "2.3",
-          "issue" : "CCCL installs header-search.cmake files in nondeterministic order and has a typo in checking target creation that leads to duplicates"
+          "issue" : "CCCL installs header-search.cmake files in nondeterministic order and has a typo in checking target creation that leads to duplicates aaaaa"
         },
         {
           "file" : "cccl/hide_kernels.diff",
