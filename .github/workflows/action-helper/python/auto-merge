@@ -57,7 +57,7 @@ def main():
             number, sha, term = pr.create(params)
             if term:
                 sys.exit(0)
-        # pr.auto_merge(number, sha)
+        pr.auto_merge(number, sha)
         if args.delete_head:
             pr.delete_head()
     except Exception as e:
