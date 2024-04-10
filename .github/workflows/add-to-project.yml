@@ -24,12 +24,12 @@ on:
 
 jobs:
   add-to-project:
-    if: github.repository == 'NVIDIA/spark-rapids-jni'
+    if: github.repository == 'NvTimLiu/spark-rapids-jni'
     name: Add new issues and pull requests to project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.6.1
         with:
-          project-url: https://github.com/orgs/NVIDIA/projects/4
+          project-url: https://github.com/orgs/NvTimLiu/projects/4
           github-token: ${{ secrets.PROJECT_TOKEN }}
 
