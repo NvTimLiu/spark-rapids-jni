@@ -102,6 +102,7 @@ cd "$LIBCUDF_BUILD_PATH"
 # Skip explicit cudf cmake configuration if it appears it has already configured
 if [[ $LIBCUDF_BUILD_CONFIGURE == true || ! -f $LIBCUDF_BUILD_PATH/CMakeCache.txt ]]; then
   echo "Configuring cudf native libs"
+  echo "-DBUILD_TESTS=$BUILD_CUDF_TESTS"
   cmake "$CUDF_PATH/cpp" \
     -DBUILD_BENCHMARKS="$BUILD_CUDF_BENCHMARKS" \
     -DCMAKE_EXPORT_COMPILE_COMMANDS="$CMAKE_EXPORT_COMPILE_COMMANDS" \
