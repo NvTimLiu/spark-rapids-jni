@@ -86,7 +86,7 @@
       <id>artifactory</id>
     </profile>
     <profile>
-      <id>mirror-apache-to-urm</id>
+      <id>mirror-apache-to-art</id>
       <repositories>
         <repository>
           <id>apache.snapshots</id>
@@ -96,7 +96,7 @@
       </repositories>
     </profile>
     <profile>
-      <id>mirror-apache-https-to-urm</id>
+      <id>mirror-apache-https-to-art</id>
       <repositories>
         <repository>
           <id>apache.snapshots.https</id>
@@ -106,7 +106,7 @@
       </repositories>
     </profile>
     <profile>
-      <id>mirror-apache2-to-urm</id>
+      <id>mirror-apache2-to-art</id>
       <repositories>
         <repository>
           <id>apache-snapshots-repo</id>
